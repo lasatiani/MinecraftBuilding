@@ -1,0 +1,62 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.block-selector {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+}
+
+.block-option {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-option.selected {
+  border-color: white;
+}
+
+.block-name {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.block-option:hover .block-name {
+  opacity: 1;
+}
